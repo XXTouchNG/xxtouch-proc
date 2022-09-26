@@ -1,9 +1,9 @@
 const ProcQueue = ObjC.classes.ProcQueue;
 const ProcQueueService = ProcQueue.sharedInstance();
-const _M = {
+const proc = {
     send: (val) => {
         send(val);
-        return _M.put('send', val);
+        return proc.put('send', val);
     },
     put: (key, val) => {
         const wrapper = { type: 'proc', payload: val };
@@ -61,4 +61,4 @@ const _M = {
             .valueOf();
     }
 };
-export default _M;
+export default proc;
