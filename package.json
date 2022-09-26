@@ -3,6 +3,7 @@
   "version": "3.0.1",
   "description": "JS bridge to XXTouchNG Proc module.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "frida-compile index -o test.js"
   },
