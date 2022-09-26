@@ -1,6 +1,10 @@
 const ProcQueue = ObjC.classes.ProcQueue;
 const ProcQueueService = ProcQueue.sharedInstance();
 const _M = {
+    send: (val) => {
+        send(val);
+        return _M.put('send', val);
+    },
     put: (key, val) => {
         const wrapper = { type: 'proc', payload: val };
         return ProcQueueService
